@@ -1,5 +1,8 @@
 package extension;
 
+import extension.logger.LogLevel;
+
+import static extension.logger.LogLevel.INFO;
 import static java.lang.String.format;
 
 public class ExtensionMetaData
@@ -12,4 +15,6 @@ public class ExtensionMetaData
     private static final int MINOR_VERSION = 1;
     private static final int REVISION = 1;
     public static final String VERSION = format("%d.%d.%d", MAJOR_VERSION, MINOR_VERSION, REVISION);
+
+    public static final LogLevel LOG_LEVEL = INFO;
 }

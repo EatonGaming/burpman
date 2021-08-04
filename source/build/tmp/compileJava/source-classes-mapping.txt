@@ -1,6 +1,8 @@
 extension/ExtensionMetaData.java
  extension.ExtensionMetaData
-extension/Logger.java
- extension.Logger
+extension/logger/Logger.java
+ extension.logger.Logger
+extension/logger/LogLevel.java
+ extension.logger.LogLevel
 burp/BurpExtender.java
  burp.BurpExtender

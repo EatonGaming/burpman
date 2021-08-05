@@ -1,16 +1,38 @@
-burp/BurpExtender.java
- burp.BurpExtender
+mvc/ModelProperty.java
+ mvc.ModelProperty
+mvc/updatestrategies/ComboBoxUpdateStrategy.java
+ mvc.updatestrategies.ComboBoxUpdateStrategy
 extension/ExtensionMetaData.java
  extension.ExtensionMetaData
+mvc/updatestrategies/ComponentUpdateStrategy.java
+ mvc.updatestrategies.ComponentUpdateStrategy
+mvc/updatestrategies/AbstractComponentUpdateStrategy.java
+ mvc.updatestrategies.AbstractComponentUpdateStrategy
+mvc/Model.java
+ mvc.Model
+extension/request/RequestModelProperties.java
+ extension.request.RequestModelProperties
+burp/BurpExtender.java
+ burp.BurpExtender
+mvc/updatestrategies/TextFieldUpdateStrategy.java
+ mvc.updatestrategies.TextFieldUpdateStrategy
+mvc/ViewController.java
+ mvc.ViewController
 extension/logger/Logger.java
  extension.logger.Logger
 extension/logger/LogLevel.java
  extension.logger.LogLevel
-extension/request/Method.java
- extension.request.Method
+mvc/updatestrategies/ComponentUpdateStrategies.java
+ mvc.updatestrategies.ComponentUpdateStrategies
+mvc/AbstractModel.java
+ mvc.AbstractModel
 extension/editor/BurpmanEditorTabFactory.java
  extension.editor.BurpmanEditorTabFactory
+extension/request/RequestModel.java
+ extension.request.RequestModel
 extension/editor/BurpmanEditorTab.java
  extension.editor.BurpmanEditorTab
+extension/request/Method.java
+ extension.request.Method
 extension/editor/BurpmanEditor.java
  extension.editor.BurpmanEditor

@@ -5,17 +5,48 @@
  */
 package extension.editor;
 
-/**
- *
- * @author mike.eaton
- */
-public class BurpmanEditor extends javax.swing.JPanel {
+import extension.request.Method;
+import extension.request.RequestModel;
+import extension.request.RequestModelProperties;
+import mvc.Model;
+import mvc.updatestrategies.ComboBoxUpdateStrategy;
+import mvc.updatestrategies.ComponentUpdateStrategies;
+import mvc.ViewController;
+import mvc.updatestrategies.TextFieldUpdateStrategy;
 
-    /**
-     * Creates new form BurpmanEditor
-     */
+import javax.swing.*;
+
+import static extension.request.RequestModelProperties.METHOD;
+import static extension.request.RequestModelProperties.PATH;
+
+public class BurpmanEditor extends JPanel implements ViewController {
+    private final ComponentUpdateStrategies componentUpdateStrategies;
+
     public BurpmanEditor() {
         initComponents();
+
+        this.componentUpdateStrategies = new ComponentUpdateStrategies();
+        initComponentUpdateStrategies();
+
+        configureMethodComboBox();
+    }
+
+    private void configureMethodComboBox() {
+        DefaultComboBoxModel<Method> comboBoxModel = new DefaultComboBoxModel<>(Method.values());
+        methodComboBox.setModel(comboBoxModel);
+    }
+
+    private void initComponentUpdateStrategies() {
+        TextFieldUpdateStrategy textFieldUpdateStrategy = new TextFieldUpdateStrategy(PATH.getPropertyName(), pathTextField);
+        componentUpdateStrategies.addStrategy(textFieldUpdateStrategy);
+
+        ComboBoxUpdateStrategy<Method> comboBoxUpdateStrategy = new ComboBoxUpdateStrategy<>(METHOD.getPropertyName(), methodComboBox);
+        componentUpdateStrategies.addStrategy(comboBoxUpdateStrategy);
+    }
+
+    @Override
+    public ComponentUpdateStrategies getComponentUpdateStrategies() {
+        return componentUpdateStrategies;
     }
 
     /**
@@ -28,7 +59,7 @@ public class BurpmanEditor extends javax.swing.JPanel {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        contentPanel = new javax.swing.JPanel();
+        contentPanel = new JPanel();
         methodComboBox = new javax.swing.JComboBox<>();
         pathTextField = new javax.swing.JTextField();
         requestAttributesTabbedPane = new javax.swing.JTabbedPane();
@@ -37,7 +68,6 @@ public class BurpmanEditor extends javax.swing.JPanel {
 
         contentPanel.setLayout(new java.awt.GridBagLayout());
 
-        methodComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -72,8 +102,8 @@ public class BurpmanEditor extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel contentPanel;
-    private javax.swing.JComboBox<String> methodComboBox;
+    private JPanel contentPanel;
+    private javax.swing.JComboBox<Method> methodComboBox;
     private javax.swing.JTextField pathTextField;
     private javax.swing.JTabbedPane requestAttributesTabbedPane;
     // End of variables declaration//GEN-END:variables

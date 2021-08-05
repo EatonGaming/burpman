@@ -2,20 +2,27 @@ package extension.editor;
 
 import burp.IMessageEditorController;
 import burp.IMessageEditorTab;
+import extension.request.RequestModel;
 
 import java.awt.*;
 
 public class BurpmanEditorTab implements IMessageEditorTab
 {
+    private final RequestModel requestModel;
     private final IMessageEditorController controller;
     private final boolean editable;
     private final BurpmanEditor burpmanEditor;
 
-    public BurpmanEditorTab(IMessageEditorController controller, boolean editable)
+    public BurpmanEditorTab(RequestModel requestModel, IMessageEditorController controller, boolean editable)
     {
+        this.requestModel = requestModel;
         this.controller = controller;
         this.editable = editable;
+
         this.burpmanEditor = new BurpmanEditor();
+
+        requestModel.bindTo(burpmanEditor);
+        requestModel.notifyAllProperties();
     }
 
     @Override

@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79b73a27-2a8a-4444-b4e6-5e0517621a31" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/extension/request/RequestModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/extension/request/RequestModelProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/AbstractModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/ModelProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/ViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/updatestrategies/AbstractComponentUpdateStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/updatestrategies/ComboBoxUpdateStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/updatestrategies/ComponentUpdateStrategies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/updatestrategies/ComponentUpdateStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/updatestrategies/TextFieldUpdateStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
@@ -15,7 +25,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditorTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditorTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditorTabFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditorTabFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +73,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
       </list>
@@ -68,6 +81,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1wH6aQg6M6S2nRhqWFsDmB5wps3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -83,7 +104,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/mvc" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/mvc" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="mvc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="mvc.updatestrategies" />
+    </key>
   </component>
   <component name="RunManager" selected="Gradle.source [build]">
     <configuration name="BurpmanEditor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

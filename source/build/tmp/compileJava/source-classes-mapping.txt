@@ -1,8 +1,16 @@
+extension/editor/BurpmanEditor.java
+ extension.editor.BurpmanEditor
 extension/ExtensionMetaData.java
  extension.ExtensionMetaData
 extension/logger/Logger.java
  extension.logger.Logger
 extension/logger/LogLevel.java
  extension.logger.LogLevel
+extension/request/Method.java
+ extension.request.Method
+extension/editor/BurpmanEditorTab.java
+ extension.editor.BurpmanEditorTab
+extension/editor/BurpmanEditorTabFactory.java
+ extension.editor.BurpmanEditorTabFactory
 burp/BurpExtender.java
  burp.BurpExtender

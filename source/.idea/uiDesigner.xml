@@ -124,5 +124,6 @@
   <component name="uidesigner-configuration">
     <option name="INSTRUMENT_CLASSES" value="false" />
     <option name="DEFAULT_LAYOUT_MANAGER" value="GridBagLayout" />
+    <option name="USE_DYNAMIC_BUNDLES" value="true" />
   </component>
 </project>

@@ -9,11 +9,13 @@ public class BurpmanEditorTab implements IMessageEditorTab
 {
     private final IMessageEditorController controller;
     private final boolean editable;
+    private final BurpmanEditor burpmanEditor;
 
     public BurpmanEditorTab(IMessageEditorController controller, boolean editable)
     {
         this.controller = controller;
         this.editable = editable;
+        this.burpmanEditor = new BurpmanEditor();
     }
 
     @Override
@@ -23,7 +25,7 @@ public class BurpmanEditorTab implements IMessageEditorTab
 
     @Override
     public Component getUiComponent() {
-        return null;
+        return burpmanEditor;
     }
 
     @Override

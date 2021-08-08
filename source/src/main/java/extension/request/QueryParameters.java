@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Optional;
 
 import static extension.request.QueryParameter.queryParam;
-import static java.util.Collections.emptyList;
 
 public class QueryParameters {
     private final List<QueryParameter> queryParameters;
@@ -17,9 +16,9 @@ public class QueryParameters {
 
     public static QueryParameters queryParameters(List<QueryParameter> queryParameters)
     {
-        ArrayList<QueryParameter> startingParams = new ArrayList<>(
-                queryParameters == null ? emptyList() : queryParameters
-        );
+        List<QueryParameter> startingParams = queryParameters == null
+                ? new ArrayList<>()
+                : queryParameters;
 
         return new QueryParameters(startingParams);
     }
@@ -29,7 +28,8 @@ public class QueryParameters {
         this.queryParameters = queryParameters;
     }
 
-    public int getNumberOfParameters() {
+    public int getNumberOfParameters()
+    {
         return queryParameters.size();
     }
 

@@ -2,6 +2,7 @@ package extension.request;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -100,12 +101,30 @@ class QueryParametersTest {
     @Test
     void givenQueryParameters_whenAddQueryParameter_thenParameterIsAddedToParameters()
     {
-        QueryParameters queryParameters = emptyQueryParameters();
+        List<QueryParameter> parameterArrayList = new ArrayList<>();
+        QueryParameters queryParameters = queryParameters(parameterArrayList);
 
         queryParameters.addParameter("foo", "bar");
 
-        Optional<QueryParameter> queryParameter = queryParameters.getQueryParameter("foo");
-        assertThat(queryParameter).isNotEmpty();
-        assertThat(queryParameter).contains(queryParam("foo", "bar"));
+        QueryParameter queryParameter = parameterArrayList.get(0);
+        assertThat(queryParameter).isNotNull();
+        assertThat(queryParameter.name).isEqualTo("foo");
+        assertThat(queryParameter.value).isEqualTo("bar");
+    }
+
+    @Test
+    void givenQueryParameters_whenAddQueryParameter_withNullName_thenIllegalArgumentExceptionThrown()
+    {
+        QueryParameters queryParameters = emptyQueryParameters();
+
+        assertThrows(IllegalArgumentException.class, () -> queryParameters.addParameter(null, "bar"));
+    }
+
+    @Test
+    void givenQueryParameters_whenAddQueryParameter_withNullValue_thenIllegalArgumentExceptionThrown()
+    {
+        QueryParameters queryParameters = emptyQueryParameters();
+
+        assertThrows(IllegalArgumentException.class, () -> queryParameters.addParameter("foo", null));
     }
 }

@@ -1,0 +1,4 @@
+burpman/netbeans/project/editor/QueryParamsTab.java
+ burpman.netbeans.project.editor.QueryParamsTab
+burpman/netbeans/project/editor/BurpmanEditor.java
+ burpman.netbeans.project.editor.BurpmanEditor

@@ -1,7 +1,5 @@
 package mvc.updatestrategies;
 
-import mvc.updatestrategies.ComponentUpdateStrategy;
-
 import java.awt.*;
 
 abstract class AbstractComponentUpdateStrategy <T extends Component> implements ComponentUpdateStrategy {

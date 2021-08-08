@@ -3,12 +3,21 @@ package extension.request;
 import mvc.AbstractModel;
 
 import static extension.request.Method.GET;
+import static extension.request.QueryParameters.emptyQueryParameters;
 import static extension.request.RequestModelProperties.METHOD;
 import static extension.request.RequestModelProperties.PATH;
 
 public class RequestModel extends AbstractModel {
-    private Method method = GET;
-    private String path = "/";
+    private final QueryParameters queryParameters;
+
+    private Method method;
+    private String path;
+
+    public RequestModel() {
+        this.queryParameters = emptyQueryParameters();
+        this.method = GET;
+        this.path = "/";
+    }
 
     public Method getMethod() {
         return method;

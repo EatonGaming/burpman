@@ -32,26 +32,26 @@ public class BurpmanEditor extends javax.swing.JPanel {
         methodComboBox = new javax.swing.JComboBox<>();
         pathTextField = new javax.swing.JTextField();
         requestAttributesTabbedPane = new javax.swing.JTabbedPane();
+        queryParamsTab = new burpman.netbeans.project.editor.QueryParamsTab();
 
         setLayout(new java.awt.GridBagLayout());
 
         contentPanel.setLayout(new java.awt.GridBagLayout());
-
-        methodComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
         contentPanel.add(methodComboBox, gridBagConstraints);
-
-        pathTextField.setText("jTextField1");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         contentPanel.add(pathTextField, gridBagConstraints);
+
+        requestAttributesTabbedPane.addTab("Query Params", queryParamsTab);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
@@ -61,6 +61,7 @@ public class BurpmanEditor extends javax.swing.JPanel {
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
         contentPanel.add(requestAttributesTabbedPane, gridBagConstraints);
+        requestAttributesTabbedPane.getAccessibleContext().setAccessibleName("Request Metadata tabs");
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
@@ -75,6 +76,7 @@ public class BurpmanEditor extends javax.swing.JPanel {
     private javax.swing.JPanel contentPanel;
     private javax.swing.JComboBox<String> methodComboBox;
     private javax.swing.JTextField pathTextField;
+    private burpman.netbeans.project.editor.QueryParamsTab queryParamsTab;
     private javax.swing.JTabbedPane requestAttributesTabbedPane;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,29 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79b73a27-2a8a-4444-b4e6-5e0517621a31" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/extension/request/RequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/extension/request/RequestModelProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/AbstractModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/ModelProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/ViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/updatestrategies/AbstractComponentUpdateStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/updatestrategies/ComboBoxUpdateStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/updatestrategies/ComponentUpdateStrategies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/updatestrategies/ComponentUpdateStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mvc/updatestrategies/TextFieldUpdateStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/extension/request/QueryParametersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/nb-cache/subprojects.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/nb-cache/subprojects.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/src/main/java/burpman/netbeans/project/editor/BurpmanEditor.form" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/src/main/java/burpman/netbeans/project/editor/BurpmanEditor.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/src/main/java/burpman/netbeans/project/editor/BurpmanEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/src/main/java/burpman/netbeans/project/editor/BurpmanEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditorTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditorTab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditorTabFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditorTabFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/extension/request/RequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/request/RequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mvc/updatestrategies/AbstractComponentUpdateStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mvc/updatestrategies/AbstractComponentUpdateStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +71,7 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -103,22 +100,33 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/mvc" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="extension.request" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/mvc" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="mvc" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="extension.request" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="mvc.updatestrategies" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.source [build]">
+  <component name="RunManager" selected="JUnit.QueryParametersTest">
     <configuration name="BurpmanEditor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="extension.editor.BurpmanEditor" />
       <module name="burpman-project.main" />
@@ -153,8 +161,41 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="QueryParametersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="burpman-project.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="extension.request.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="extension.request" />
+      <option name="MAIN_CLASS_NAME" value="extension.request.QueryParametersTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QueryParametersTest.givenPrePopulatedQueryParameters_whenGetQueryParameter_withNameThatExistsInContainer_thenQueryParameterIsReturned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="burpman-project.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="extension.request.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="extension.request" />
+      <option name="MAIN_CLASS_NAME" value="extension.request.QueryParametersTest" />
+      <option name="METHOD_NAME" value="givenPrePopulatedQueryParameters_whenGetQueryParameter_withNameThatExistsInContainer_thenQueryParameterIsReturned" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.QueryParametersTest" />
+        <item itemvalue="JUnit.QueryParametersTest.givenPrePopulatedQueryParameters_whenGetQueryParameter_withNameThatExistsInContainer_thenQueryParameterIsReturned" />
         <item itemvalue="Gradle.source [build]" />
         <item itemvalue="Application.BurpmanEditor" />
       </list>

@@ -19,7 +19,7 @@ public class BurpmanEditorTab implements IMessageEditorTab
         this.controller = controller;
         this.editable = editable;
 
-        this.burpmanEditor = new BurpmanEditor();
+        this.burpmanEditor = new BurpmanEditor(requestModel);
 
         requestModel.bindTo(burpmanEditor);
         requestModel.notifyAllProperties();

@@ -5,8 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79b73a27-2a8a-4444-b4e6-5e0517621a31" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/extension/editor/tabs/queryparams/QueryParamsTab.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/extension/editor/tabs/queryparams/QueryParamsTableColumn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/extension/editor/tabs/queryparams/QueryParamsTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/nb-cache/subprojects.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/nb-cache/subprojects.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/src/main/java/burpman/netbeans/project/editor/QueryParamsTab.form" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/src/main/java/burpman/netbeans/project/editor/QueryParamsTab.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/src/main/java/burpman/netbeans/project/editor/QueryParamsTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/src/main/java/burpman/netbeans/project/editor/QueryParamsTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditorTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/editor/BurpmanEditorTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/extension/request/RequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/request/RequestModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/extension/request/QueryParametersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/extension/request/QueryParametersTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,9 +72,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>

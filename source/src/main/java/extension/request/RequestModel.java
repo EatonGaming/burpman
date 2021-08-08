@@ -44,4 +44,8 @@ public class RequestModel extends AbstractModel {
         propertyChangeSupport.firePropertyChange(METHOD.getPropertyName(), null, method);
         propertyChangeSupport.firePropertyChange(PATH.getPropertyName(), null, path);
     }
+
+    public QueryParameters getQueryParameters() {
+        return queryParameters;
+    }
 }

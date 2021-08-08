@@ -108,8 +108,8 @@ class QueryParametersTest {
 
         QueryParameter queryParameter = parameterArrayList.get(0);
         assertThat(queryParameter).isNotNull();
-        assertThat(queryParameter.name).isEqualTo("foo");
-        assertThat(queryParameter.value).isEqualTo("bar");
+        assertThat(queryParameter.getName()).isEqualTo("foo");
+        assertThat(queryParameter.getValue()).isEqualTo("bar");
     }
 
     @Test
@@ -126,5 +126,27 @@ class QueryParametersTest {
         QueryParameters queryParameters = emptyQueryParameters();
 
         assertThrows(IllegalArgumentException.class, () -> queryParameters.addParameter("foo", null));
+    }
+
+    @Test
+    void given3QueryParameters_whenGetQueryParameterAtIndex1_thenCorrectParameterReturned()
+    {
+        QueryParameters queryParameters = queryParameters(List.of(
+                queryParam("a", "b"),
+                queryParam("c", "d"),
+                queryParam("e", "f")
+        ));
+
+        QueryParameter queryParameter = queryParameters.getQueryParameter(1);
+
+        assertThat(queryParameter).isEqualTo(queryParam("c", "d"));
+    }
+
+    @Test
+    void givenNoQueryParameters_whenGetQueryParameterAtIndex1_thenIllegalArgumentExceptionThrown()
+    {
+        QueryParameters queryParameters = emptyQueryParameters();
+
+        assertThrows(IllegalArgumentException.class, () -> queryParameters.getQueryParameter(1));
     }
 }

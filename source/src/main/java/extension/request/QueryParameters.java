@@ -41,7 +41,7 @@ public class QueryParameters {
         }
 
         return queryParameters.stream()
-                .filter(x -> name.equals(x.name))
+                .filter(x -> name.equals(x.getName()))
                 .findFirst();
     }
 
@@ -62,5 +62,14 @@ public class QueryParameters {
         {
             throw new IllegalArgumentException("You must provide a value when adding a query parameter.");
         }
+    }
+
+    public QueryParameter getQueryParameter(int index) {
+        if (index < 0 || index > queryParameters.size())
+        {
+            throw new IllegalArgumentException("You must provide a valid index to retrieve a query parameter.");
+        }
+
+        return queryParameters.get(index);
     }
 }

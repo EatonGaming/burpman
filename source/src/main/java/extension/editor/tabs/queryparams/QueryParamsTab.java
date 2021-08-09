@@ -1,45 +1,45 @@
 package extension.editor.tabs.queryparams;
 
-import extension.logger.LogLevel;
 import extension.request.QueryParameters;
 
 import javax.swing.*;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
-
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.util.List;
 
 import static extension.editor.tabs.queryparams.QueryParamsTableColumn.queryParamsTableColumnsInOrder;
-import static extension.logger.LogLevel.INFO;
-import static extension.logger.Logger.log;
-import static javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS;
-import static javax.swing.JTable.AUTO_RESIZE_NEXT_COLUMN;
+import static javax.swing.JTable.AUTO_RESIZE_OFF;
 
 public class QueryParamsTab extends JPanel {
-    private final QueryParamsTableModel queryParamsTableModel;
 
     public QueryParamsTab(QueryParameters queryParameters) {
         initComponents();
 
-        this.queryParamsTableModel = new QueryParamsTableModel(queryParameters);
+        QueryParamsTableModel queryParamsTableModel = new QueryParamsTableModel(queryParameters);
         queryParamsTable.setModel(queryParamsTableModel);
+        queryParamsTable.setAutoResizeMode(AUTO_RESIZE_OFF);
 
-        configureColumnWidths();
+        addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                recalculateColumnWidths();
+            }
+        });
     }
 
-    private void configureColumnWidths()
+    private void recalculateColumnWidths()
     {
-        queryParamsTable.setAutoResizeMode(AUTO_RESIZE_ALL_COLUMNS);
-
         TableColumnModel tableColumnModel = queryParamsTable.getColumnModel();
         List<QueryParamsTableColumn> queryParamsTableColumns = queryParamsTableColumnsInOrder();
+        int tableWidth = tableScrollPane.getWidth();
 
         queryParamsTableColumns.forEach(x -> {
             TableColumn tableColumn = tableColumnModel.getColumn(x.positionSortIndex);
+            int columnWidth = Math.round(tableWidth * x.columnWidthPercentage);
 
-            log(INFO, "Setting column {%s} to width {%d}...", x.columnName, x.columnWidthPercentage);
-
-            tableColumn.setPreferredWidth(x.columnWidthPercentage);
+            tableColumn.setPreferredWidth(columnWidth);
         });
     }
 

@@ -14,10 +14,13 @@ import static javax.swing.JTable.AUTO_RESIZE_OFF;
 
 public class QueryParamsTab extends JPanel {
 
+    private final QueryParamsTableModel queryParamsTableModel;
+
     public QueryParamsTab(QueryParameters queryParameters) {
+        queryParamsTableModel = new QueryParamsTableModel(queryParameters);
+
         initComponents();
 
-        QueryParamsTableModel queryParamsTableModel = new QueryParamsTableModel(queryParameters);
         queryParamsTable.setModel(queryParamsTableModel);
         queryParamsTable.setAutoResizeMode(AUTO_RESIZE_OFF);
 
@@ -55,6 +58,7 @@ public class QueryParamsTab extends JPanel {
 
         tableScrollPane = new javax.swing.JScrollPane();
         queryParamsTable = new javax.swing.JTable();
+        addQueryParamPanel1 = new AddQueryParamsPanel(queryParamsTableModel::addParameter);
 
         setLayout(new java.awt.GridBagLayout());
 
@@ -62,16 +66,23 @@ public class QueryParamsTab extends JPanel {
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
         add(tableScrollPane, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
+        add(addQueryParamPanel1, gridBagConstraints);
     }// </editor-fold>
 
 
     // Variables declaration - do not modify
+    private AddQueryParamsPanel addQueryParamPanel1;
     private javax.swing.JTable queryParamsTable;
     private javax.swing.JScrollPane tableScrollPane;
     // End of variables declaration

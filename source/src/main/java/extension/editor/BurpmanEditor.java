@@ -24,6 +24,7 @@ public class BurpmanEditor extends JPanel implements ViewController {
 
     public BurpmanEditor(RequestModel requestModel) {
         this.requestModel = requestModel;
+
         initComponents();
 
         this.componentUpdateStrategies = new ComponentUpdateStrategies();

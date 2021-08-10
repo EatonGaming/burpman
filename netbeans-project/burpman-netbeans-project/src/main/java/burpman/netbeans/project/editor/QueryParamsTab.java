@@ -30,6 +30,7 @@ public class QueryParamsTab extends javax.swing.JPanel {
 
         tableScrollPane = new javax.swing.JScrollPane();
         queryParamsTable = new javax.swing.JTable();
+        addQueryParamPanel1 = new burpman.netbeans.project.editor.AddQueryParamsPanel();
 
         setLayout(new java.awt.GridBagLayout());
 
@@ -37,16 +38,23 @@ public class QueryParamsTab extends javax.swing.JPanel {
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.weighty = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
         add(tableScrollPane, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
+        add(addQueryParamPanel1, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private burpman.netbeans.project.editor.AddQueryParamsPanel addQueryParamPanel1;
     private javax.swing.JTable queryParamsTable;
     private javax.swing.JScrollPane tableScrollPane;
     // End of variables declaration//GEN-END:variables

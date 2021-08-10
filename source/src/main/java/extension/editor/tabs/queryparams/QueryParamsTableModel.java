@@ -18,6 +18,15 @@ public class QueryParamsTableModel extends AbstractTableModel {
         this.queryParameters = queryParameters;
     }
 
+    void addParameter(String name, String value)
+    {
+        int insertedRowIndex = queryParameters.getNumberOfParameters();
+
+        queryParameters.addParameter(name, value);
+
+        fireTableRowsInserted(insertedRowIndex, insertedRowIndex);
+    }
+
     @Override
     public int getRowCount() {
         return queryParameters.getNumberOfParameters();

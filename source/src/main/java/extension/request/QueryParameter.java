@@ -6,16 +6,28 @@ public class QueryParameter {
     private boolean enabled;
     private String name;
     private String value;
+    private final Runnable queryParamUpdatedAction;
+
+    public static QueryParameter queryParamForModel(String name, String value, Runnable queryParamUpdatedAction)
+    {
+        return new QueryParameter(true, name, value, queryParamUpdatedAction);
+    }
 
     public static QueryParameter queryParam(String name, String value)
     {
-        return new QueryParameter(true, name, value);
+        return new QueryParameter(true, name, value, () -> {});
     }
 
-    private QueryParameter(boolean enabled, String name, String value) {
+    public static QueryParameter disabledQueryParam(String name, String value)
+    {
+        return new QueryParameter(false, name, value, () -> {});
+    }
+
+    private QueryParameter(boolean enabled, String name, String value, Runnable queryParamUpdatedAction) {
         this.enabled = enabled;
         this.name = name;
         this.value = value;
+        this.queryParamUpdatedAction = queryParamUpdatedAction;
     }
 
     public boolean isEnabled() {
@@ -24,6 +36,8 @@ public class QueryParameter {
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+
+        queryParamUpdatedAction.run();
     }
 
     public String getName() {
@@ -32,6 +46,8 @@ public class QueryParameter {
 
     public void setName(String name) {
         this.name = name;
+
+        queryParamUpdatedAction.run();
     }
 
     public String getValue() {
@@ -40,6 +56,8 @@ public class QueryParameter {
 
     public void setValue(String value) {
         this.value = value;
+
+        queryParamUpdatedAction.run();
     }
 
     public String toQueryStringFormat()

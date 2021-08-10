@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import static extension.request.QueryParameter.disabledQueryParam;
 import static extension.request.QueryParameter.queryParam;
 import static extension.request.QueryParameters.*;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -184,6 +185,32 @@ class QueryParametersTest {
         String queryParametersForPath = queryParameters.getQueryString();
 
         assertThat(queryParametersForPath).isEqualTo("?a=b&c=d&e=f");
+    }
+
+    @Test
+    void givenOneDisabledQueryParameter_whenGetQueryString_thenEmptyStringReturned()
+    {
+        QueryParameters queryParameters = queryParameters(List.of(
+                disabledQueryParam("a", "b")
+        ));
+
+        String queryParametersForPath = queryParameters.getQueryString();
+
+        assertThat(queryParametersForPath).isEqualTo("");
+    }
+
+    @Test
+    void givenOneDisabledQueryParameter_inbetweenTwoEnabledQueryParams_whenGetQueryString_thenCorrectStringReturned()
+    {
+        QueryParameters queryParameters = queryParameters(List.of(
+                queryParam("a", "b"),
+                disabledQueryParam("c", "d"),
+                queryParam("e", "f")
+        ));
+
+        String queryParametersForPath = queryParameters.getQueryString();
+
+        assertThat(queryParametersForPath).isEqualTo("?a=b&e=f");
     }
 
     @Test

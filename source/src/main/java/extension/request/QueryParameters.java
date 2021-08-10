@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static extension.request.QueryParameter.queryParam;
+import static extension.request.QueryParameter.queryParamForModel;
+import static java.util.stream.Collectors.toList;
 
 public class QueryParameters {
     private final List<QueryParameter> queryParameters;
@@ -57,7 +60,7 @@ public class QueryParameters {
     {
         assertValuesProvidedAreNotNull(name, value);
 
-        QueryParameter queryParameter = queryParam(name, value);
+        QueryParameter queryParameter = queryParamForModel(name, value, notifyQueryParametersUpdatedAction);
         queryParameters.add(queryParameter);
 
         notifyQueryParametersUpdatedAction.run();
@@ -84,7 +87,11 @@ public class QueryParameters {
     }
 
     public String getQueryString() {
-        if (queryParameters.isEmpty())
+        List<QueryParameter> enabledQueryParameters = queryParameters.stream()
+                .filter(QueryParameter::isEnabled)
+                .collect(toList());
+
+        if (enabledQueryParameters.isEmpty())
         {
             return "";
         }
@@ -93,7 +100,7 @@ public class QueryParameters {
 
         stringBuilder.append("?");
 
-        for (Iterator<QueryParameter> iterator = queryParameters.iterator(); iterator.hasNext();)
+        for (Iterator<QueryParameter> iterator = enabledQueryParameters.iterator(); iterator.hasNext();)
         {
             QueryParameter queryParameter = iterator.next();
 

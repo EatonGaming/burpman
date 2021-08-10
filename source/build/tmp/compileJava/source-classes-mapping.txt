@@ -31,6 +31,8 @@ mvc/ViewController.java
  mvc.ViewController
 mvc/updatestrategies/ComboBoxUpdateStrategy.java
  mvc.updatestrategies.ComboBoxUpdateStrategy
+extension/editor/BurpmanEditorTabFactory.java
+ extension.editor.BurpmanEditorTabFactory
 extension/request/RequestModel.java
  extension.request.RequestModel
 extension/request/QueryParameter.java
@@ -41,8 +43,6 @@ extension/editor/tabs/queryparams/QueryParamsTableColumn.java
  extension.editor.tabs.queryparams.QueryParamsTableColumn
 extension/request/QueryParameters.java
  extension.request.QueryParameters
-extension/editor/BurpmanEditorTabFactory.java
- extension.editor.BurpmanEditorTabFactory
 extension/editor/tabs/queryparams/QueryParamsTab.java
  extension.editor.tabs.queryparams.QueryParamsTab
  extension.editor.tabs.queryparams.QueryParamsTab$1

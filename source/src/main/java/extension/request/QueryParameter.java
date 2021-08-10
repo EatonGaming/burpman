@@ -42,6 +42,11 @@ public class QueryParameter {
         this.value = value;
     }
 
+    public String toQueryStringFormat()
+    {
+        return String.format("%s=%s", name, value);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

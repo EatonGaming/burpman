@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.Optional;
 
 import static extension.request.QueryParameter.queryParam;
-import static extension.request.QueryParameters.emptyQueryParameters;
-import static extension.request.QueryParameters.queryParameters;
+import static extension.request.QueryParameters.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.*;
 
 class QueryParametersTest {
 
@@ -148,5 +148,52 @@ class QueryParametersTest {
         QueryParameters queryParameters = emptyQueryParameters();
 
         assertThrows(IllegalArgumentException.class, () -> queryParameters.getQueryParameter(1));
+    }
+
+    @Test
+    void givenNoQueryParameters_whenGetQueryString_thenEmptyStringReturned()
+    {
+        QueryParameters queryParameters = emptyQueryParameters();
+
+        String queryParametersForPath = queryParameters.getQueryString();
+
+        assertThat(queryParametersForPath).isEqualTo("");
+    }
+
+    @Test
+    void givenOneQueryParameter_whenGetQueryString_thenCorrectQueryStringReturned()
+    {
+        QueryParameters queryParameters = queryParameters(List.of(
+                queryParam("foo", "bar")
+        ));
+
+        String queryParametersForPath = queryParameters.getQueryString();
+
+        assertThat(queryParametersForPath).isEqualTo("?foo=bar");
+    }
+
+    @Test
+    void givenThreeQueryParameters_whenGetQueryString_thenCorrectQueryStringReturned()
+    {
+        QueryParameters queryParameters = queryParameters(List.of(
+                queryParam("a", "b"),
+                queryParam("c", "d"),
+                queryParam("e", "f")
+        ));
+
+        String queryParametersForPath = queryParameters.getQueryString();
+
+        assertThat(queryParametersForPath).isEqualTo("?a=b&c=d&e=f");
+    }
+
+    @Test
+    void givenMockAction_whenAddQueryParameter_thenActionInvoked()
+    {
+        Runnable mockAction = mock(Runnable.class);
+        QueryParameters queryParameters = queryParametersForNewRequestModel(mockAction);
+
+        queryParameters.addParameter("foo", "bar");
+
+        verify(mockAction, times(1)).run();
     }
 }

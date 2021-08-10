@@ -1,6 +1,7 @@
 package extension.request;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -8,10 +9,16 @@ import static extension.request.QueryParameter.queryParam;
 
 public class QueryParameters {
     private final List<QueryParameter> queryParameters;
+    private final Runnable notifyQueryParametersUpdatedAction;
+
+    public static QueryParameters queryParametersForNewRequestModel(Runnable notifyQueryParametersUpdatedAction)
+    {
+        return new QueryParameters(new ArrayList<>(), notifyQueryParametersUpdatedAction);
+    }
 
     public static QueryParameters emptyQueryParameters()
     {
-        return new QueryParameters(new ArrayList<>());
+        return new QueryParameters(new ArrayList<>(), () -> {});
     }
 
     public static QueryParameters queryParameters(List<QueryParameter> queryParameters)
@@ -20,12 +27,13 @@ public class QueryParameters {
                 ? new ArrayList<>()
                 : queryParameters;
 
-        return new QueryParameters(startingParams);
+        return new QueryParameters(startingParams, () -> {});
     }
 
-    private QueryParameters(List<QueryParameter> queryParameters)
+    private QueryParameters(List<QueryParameter> queryParameters, Runnable notifyQueryParametersUpdatedAction)
     {
         this.queryParameters = queryParameters;
+        this.notifyQueryParametersUpdatedAction = notifyQueryParametersUpdatedAction;
     }
 
     public int getNumberOfParameters()
@@ -51,6 +59,8 @@ public class QueryParameters {
 
         QueryParameter queryParameter = queryParam(name, value);
         queryParameters.add(queryParameter);
+
+        notifyQueryParametersUpdatedAction.run();
     }
 
     private void assertValuesProvidedAreNotNull(String name, String value) {
@@ -71,5 +81,30 @@ public class QueryParameters {
         }
 
         return queryParameters.get(index);
+    }
+
+    public String getQueryString() {
+        if (queryParameters.isEmpty())
+        {
+            return "";
+        }
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append("?");
+
+        for (Iterator<QueryParameter> iterator = queryParameters.iterator(); iterator.hasNext();)
+        {
+            QueryParameter queryParameter = iterator.next();
+
+            stringBuilder.append(queryParameter.toQueryStringFormat());
+
+            if (iterator.hasNext())
+            {
+                stringBuilder.append("&");
+            }
+        }
+
+        return stringBuilder.toString();
     }
 }

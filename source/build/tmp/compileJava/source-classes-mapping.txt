@@ -6,47 +6,47 @@ mvc/updatestrategies/ComponentUpdateStrategy.java
  mvc.updatestrategies.ComponentUpdateStrategy
 extension/request/RequestModelProperties.java
  extension.request.RequestModelProperties
-extension/request/QueryParameters.java
- extension.request.QueryParameters
+mvc/Model.java
+ mvc.Model
 extension/logger/LogLevel.java
  extension.logger.LogLevel
-extension/request/QueryParameter.java
- extension.request.QueryParameter
+extension/editor/tabs/queryparams/AddQueryParamsPanel.java
+ extension.editor.tabs.queryparams.AddQueryParamsPanel
+ extension.editor.tabs.queryparams.AddQueryParamsPanel$EnterKeyListener
 mvc/AbstractModel.java
  mvc.AbstractModel
 extension/request/Method.java
  extension.request.Method
-extension/editor/BurpmanEditorTabFactory.java
- extension.editor.BurpmanEditorTabFactory
+burp/BurpExtender.java
+ burp.BurpExtender
 mvc/ModelProperty.java
  mvc.ModelProperty
 mvc/updatestrategies/ComponentUpdateStrategies.java
  mvc.updatestrategies.ComponentUpdateStrategies
 mvc/updatestrategies/TextFieldUpdateStrategy.java
  mvc.updatestrategies.TextFieldUpdateStrategy
-extension/editor/tabs/queryparams/QueryParamsTableModel.java
- extension.editor.tabs.queryparams.QueryParamsTableModel
+mvc/updatestrategies/AbstractComponentUpdateStrategy.java
+ mvc.updatestrategies.AbstractComponentUpdateStrategy
 mvc/ViewController.java
  mvc.ViewController
 mvc/updatestrategies/ComboBoxUpdateStrategy.java
  mvc.updatestrategies.ComboBoxUpdateStrategy
-mvc/updatestrategies/AbstractComponentUpdateStrategy.java
- mvc.updatestrategies.AbstractComponentUpdateStrategy
-mvc/Model.java
- mvc.Model
-burp/BurpExtender.java
- burp.BurpExtender
 extension/request/RequestModel.java
  extension.request.RequestModel
-extension/editor/tabs/queryparams/QueryParamsTableColumn.java
- extension.editor.tabs.queryparams.QueryParamsTableColumn
+extension/request/QueryParameter.java
+ extension.request.QueryParameter
 extension/editor/BurpmanEditorTab.java
  extension.editor.BurpmanEditorTab
-extension/editor/BurpmanEditor.java
- extension.editor.BurpmanEditor
-extension/editor/tabs/queryparams/AddQueryParamsPanel.java
- extension.editor.tabs.queryparams.AddQueryParamsPanel
- extension.editor.tabs.queryparams.AddQueryParamsPanel$EnterKeyListener
+extension/editor/tabs/queryparams/QueryParamsTableColumn.java
+ extension.editor.tabs.queryparams.QueryParamsTableColumn
+extension/request/QueryParameters.java
+ extension.request.QueryParameters
+extension/editor/BurpmanEditorTabFactory.java
+ extension.editor.BurpmanEditorTabFactory
 extension/editor/tabs/queryparams/QueryParamsTab.java
  extension.editor.tabs.queryparams.QueryParamsTab
  extension.editor.tabs.queryparams.QueryParamsTab$1
+extension/editor/BurpmanEditor.java
+ extension.editor.BurpmanEditor
+extension/editor/tabs/queryparams/QueryParamsTableModel.java
+ extension.editor.tabs.queryparams.QueryParamsTableModel

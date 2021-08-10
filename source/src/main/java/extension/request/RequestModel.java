@@ -4,8 +4,10 @@ import mvc.AbstractModel;
 
 import static extension.request.Method.GET;
 import static extension.request.QueryParameters.emptyQueryParameters;
+import static extension.request.QueryParameters.queryParametersForNewRequestModel;
 import static extension.request.RequestModelProperties.METHOD;
 import static extension.request.RequestModelProperties.PATH;
+import static java.lang.String.format;
 
 public class RequestModel extends AbstractModel {
     private final QueryParameters queryParameters;
@@ -14,7 +16,7 @@ public class RequestModel extends AbstractModel {
     private String path;
 
     public RequestModel() {
-        this.queryParameters = emptyQueryParameters();
+        this.queryParameters = queryParametersForNewRequestModel(this::notifyPathChanged);
         this.method = GET;
         this.path = "/";
     }
@@ -29,23 +31,30 @@ public class RequestModel extends AbstractModel {
         this.method = method;
     }
 
-    public String getPath() {
-        return path;
-    }
-
     public void setPath(String path, boolean notifyValueChanged) {
-        notifyValueChanged(notifyValueChanged, PATH.getPropertyName(), this.path, path);
+        String oldPath = getPathWithQueryString();
 
         this.path = path;
+
+        notifyValueChanged(notifyValueChanged, PATH.getPropertyName(), oldPath, getPathWithQueryString());
+    }
+
+    public String getPathWithQueryString()
+    {
+        return format("%s%s", path, queryParameters.getQueryString());
     }
 
     @Override
     public void notifyAllProperties() {
         propertyChangeSupport.firePropertyChange(METHOD.getPropertyName(), null, method);
-        propertyChangeSupport.firePropertyChange(PATH.getPropertyName(), null, path);
+        notifyPathChanged();
     }
 
     public QueryParameters getQueryParameters() {
         return queryParameters;
+    }
+
+    private void notifyPathChanged() {
+        propertyChangeSupport.firePropertyChange(PATH.getPropertyName(), null, getPathWithQueryString());
     }
 }

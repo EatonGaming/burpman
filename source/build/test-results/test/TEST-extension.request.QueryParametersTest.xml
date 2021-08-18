@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="extension.request.QueryParametersTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2021-08-18T20:36:27" hostname="PSIT100277" time="0.819">
+  <properties/>
+  <testcase name="givenNoQueryParameters_whenGetQueryString_thenEmptyStringReturned()" classname="extension.request.QueryParametersTest" time="0.092"/>
+  <testcase name="givenQueryParameters_whenAddQueryParameter_thenParameterIsAddedToParameters()" classname="extension.request.QueryParametersTest" time="0.002"/>
+  <testcase name="givenMockAction_whenAddQueryParameter_thenActionInvoked()" classname="extension.request.QueryParametersTest" time="0.69"/>
+  <testcase name="givenQueryParameters_whenGetQueryParameter_withNullName_thenIllegalArgumentExceptionIsThrown()" classname="extension.request.QueryParametersTest" time="0.004"/>
+  <testcase name="givenThreeQueryParameters_whenGetQueryString_thenCorrectQueryStringReturned()" classname="extension.request.QueryParametersTest" time="0.002"/>
+  <testcase name="givenOneDisabledQueryParameter_whenGetQueryString_thenEmptyStringReturned()" classname="extension.request.QueryParametersTest" time="0.001"/>
+  <testcase name="givenOneDisabledQueryParameter_inbetweenTwoEnabledQueryParams_whenGetQueryString_thenCorrectStringReturned()" classname="extension.request.QueryParametersTest" time="0.001"/>
+  <testcase name="givenQueryParameters_whenAddQueryParameter_withNullName_thenIllegalArgumentExceptionThrown()" classname="extension.request.QueryParametersTest" time="0.001"/>
+  <testcase name="givenQueryParameters_withNullCollection_whenGetNumberOfParameters_then0IsReturned()" classname="extension.request.QueryParametersTest" time="0.002"/>
+  <testcase name="givenPrePopulatedQueryParameters_whenGetQueryParameter_withNameThatDoesNotExistInContainer_thenQueryParameterIsNotReturned()" classname="extension.request.QueryParametersTest" time="0.002"/>
+  <testcase name="givenThreeQueryParameters_whenGetNumberOfParameters_then3IsReturned()" classname="extension.request.QueryParametersTest" time="0.001"/>
+  <testcase name="givenPrePopulatedQueryParameters_whenGetQueryParameter_withNameThatExistsInContainer_thenQueryParameterIsReturned()" classname="extension.request.QueryParametersTest" time="0.002"/>
+  <testcase name="givenEmptyQueryParameters_whenGetNumberOfParameters_then0IsReturned()" classname="extension.request.QueryParametersTest" time="0.001"/>
+  <testcase name="givenQueryParameters_whenAddQueryParameter_withNullValue_thenIllegalArgumentExceptionThrown()" classname="extension.request.QueryParametersTest" time="0.002"/>
+  <testcase name="givenOneQueryParameter_whenGetQueryString_thenCorrectQueryStringReturned()" classname="extension.request.QueryParametersTest" time="0.002"/>
+  <testcase name="given3QueryParameters_whenGetQueryParameterAtIndex1_thenCorrectParameterReturned()" classname="extension.request.QueryParametersTest" time="0.001"/>
+  <testcase name="givenNoQueryParameters_whenGetQueryParameterAtIndex1_thenIllegalArgumentExceptionThrown()" classname="extension.request.QueryParametersTest" time="0.001"/>
+  <testcase name="givenOneQueryParameter_whenGetNumberOfParameters_then1IsReturned()" classname="extension.request.QueryParametersTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

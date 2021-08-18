@@ -54,11 +54,17 @@ public class QueryParameters {
                 .findFirst();
     }
 
-    public void addParameter(String name, String value)
+    public void addParameter(String name, String value, Runnable onDeleteUpdateTableModelAction)
     {
         assertValuesProvidedAreNotNull(name, value);
 
-        QueryParameter queryParameter = queryParamForModel(name, value, notifyQueryParametersUpdatedAction);
+        int currentNumberOfParams = queryParameters.size();
+
+        QueryParameter queryParameter = queryParamForModel(name, value, notifyQueryParametersUpdatedAction, () -> {
+            queryParameters.remove(currentNumberOfParams);
+            onDeleteUpdateTableModelAction.run();
+            notifyQueryParametersUpdatedAction.run();
+        });
         queryParameters.add(queryParameter);
 
         notifyQueryParametersUpdatedAction.run();

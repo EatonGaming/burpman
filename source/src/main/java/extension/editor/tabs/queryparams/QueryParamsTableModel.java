@@ -22,7 +22,7 @@ public class QueryParamsTableModel extends AbstractTableModel {
     {
         int insertedRowIndex = queryParameters.getNumberOfParameters();
 
-        queryParameters.addParameter(name, value);
+        queryParameters.addParameter(name, value, () -> fireTableRowsDeleted(insertedRowIndex, insertedRowIndex));
 
         fireTableRowsInserted(insertedRowIndex, insertedRowIndex);
     }

@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
-import static extension.request.QueryParameter.queryParam;
 import static extension.request.QueryParameter.queryParamForModel;
 import static java.util.stream.Collectors.toList;
 

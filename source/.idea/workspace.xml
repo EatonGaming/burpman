@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79b73a27-2a8a-4444-b4e6-5e0517621a31" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/extension/editor/tabs/queryparams/AddQueryParamsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/editor/tabs/queryparams/AddQueryParamsPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/extension/request/QueryParametersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/extension/request/QueryParametersTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

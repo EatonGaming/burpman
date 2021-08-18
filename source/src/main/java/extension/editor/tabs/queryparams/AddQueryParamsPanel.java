@@ -1,9 +1,13 @@
 package extension.editor.tabs.queryparams;
 
+import extension.logger.LogLevel;
+import extension.logger.Logger;
+
 import javax.swing.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 import java.util.function.BiConsumer;
+
+import static extension.logger.Logger.log;
 
 public class AddQueryParamsPanel extends JPanel {
     private final BiConsumer<String, String> addQueryParameterConsumer;
@@ -22,6 +26,9 @@ public class AddQueryParamsPanel extends JPanel {
         EnterKeyListener enterKeyListener = new EnterKeyListener(this::addQueryParameter);
         nameTextField.addKeyListener(enterKeyListener);
         valueTextField.addKeyListener(enterKeyListener);
+
+        nameTextField.addFocusListener(new SelectTextFocusListener(nameTextField));
+        valueTextField.addFocusListener(new SelectTextFocusListener(valueTextField));
     }
 
     private void addQueryParameter() {
@@ -123,6 +130,31 @@ public class AddQueryParamsPanel extends JPanel {
         @Override
         public void keyReleased(KeyEvent e) {
             // Do nothing.
+        }
+    }
+
+    private static class SelectTextFocusListener implements FocusListener
+    {
+        private final JTextField textField;
+
+        private SelectTextFocusListener(JTextField textField) {
+            this.textField = textField;
+        }
+
+        @Override
+        public void focusGained(FocusEvent e) {
+            if (e.getCause() == FocusEvent.Cause.TRAVERSAL_FORWARD)
+            {
+                textField.selectAll();
+            }
+        }
+
+        @Override
+        public void focusLost(FocusEvent e) {
+            if (e.getCause() == FocusEvent.Cause.TRAVERSAL_FORWARD)
+            {
+                textField.select(0, 0);
+            }
         }
     }
 }

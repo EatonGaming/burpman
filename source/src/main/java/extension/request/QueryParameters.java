@@ -112,4 +112,29 @@ public class QueryParameters {
 
         return stringBuilder.toString();
     }
+
+    public List<Integer> remove(int[] queryParameterIndicesToRemove)
+    {
+        List<QueryParameter> lookupQueryParameters = new ArrayList<>(queryParameters);
+        ArrayList<Integer> parametersRemoved = new ArrayList<>();
+
+        for (int j : queryParameterIndicesToRemove)
+        {
+            if (lookupQueryParameters.size() - 1 < j || j < 0)
+            {
+                continue;
+            }
+
+            QueryParameter queryParameterToRemove = lookupQueryParameters.get(j);
+            queryParameters.remove(queryParameterToRemove);
+            parametersRemoved.add(j);
+        }
+
+        if (!parametersRemoved.isEmpty())
+        {
+            notifyQueryParametersUpdatedAction.run();
+        }
+
+        return parametersRemoved;
+    }
 }

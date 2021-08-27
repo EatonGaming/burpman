@@ -5,6 +5,7 @@ import extension.request.QueryParameters;
 import javax.swing.*;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
+import java.awt.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.util.List;
@@ -30,6 +31,7 @@ public class QueryParamsTab extends JPanel {
                 recalculateColumnWidths();
             }
         });
+
     }
 
     private void recalculateColumnWidths()
@@ -46,6 +48,18 @@ public class QueryParamsTab extends JPanel {
         });
     }
 
+    private void deleteSelectedQueryParams()
+    {
+        int[] rowsToDelete = queryParamsTable.getSelectedRows();
+
+        if (rowsToDelete.length == 0)
+        {
+            return;
+        }
+
+        queryParamsTableModel.removeParameters(rowsToDelete);
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -59,6 +73,7 @@ public class QueryParamsTab extends JPanel {
         tableScrollPane = new javax.swing.JScrollPane();
         queryParamsTable = new javax.swing.JTable();
         addQueryParamPanel1 = new AddQueryParamsPanel(queryParamsTableModel::addParameter);
+        queryParamsActionsPanel1 = new QueryParamsActionsPanel(this::deleteSelectedQueryParams);
 
         setLayout(new java.awt.GridBagLayout());
 
@@ -75,14 +90,21 @@ public class QueryParamsTab extends JPanel {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.insets = new java.awt.Insets(10, 0, 0, 0);
         add(addQueryParamPanel1, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new Insets(0, 5, 0, 0);
+        add(queryParamsActionsPanel1, gridBagConstraints);
     }// </editor-fold>
 
 
     // Variables declaration - do not modify
     private AddQueryParamsPanel addQueryParamPanel1;
+    private QueryParamsActionsPanel queryParamsActionsPanel1;
     private javax.swing.JTable queryParamsTable;
     private javax.swing.JScrollPane tableScrollPane;
     // End of variables declaration

@@ -5,9 +5,11 @@ import extension.request.QueryParameters;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.List;
+import java.util.Optional;
 
 import static extension.editor.tabs.queryparams.QueryParamsTableColumn.UNKNOWN;
 import static extension.editor.tabs.queryparams.QueryParamsTableColumn.queryParamsTableColumnsInOrder;
+import static javax.swing.SwingUtilities.invokeLater;
 
 public class QueryParamsTableModel extends AbstractTableModel {
     private static final List<QueryParamsTableColumn> COLUMNS_IN_ORDER = queryParamsTableColumnsInOrder();
@@ -25,6 +27,19 @@ public class QueryParamsTableModel extends AbstractTableModel {
         queryParameters.addParameter(name, value);
 
         fireTableRowsInserted(insertedRowIndex, insertedRowIndex);
+    }
+
+    void removeParameters(int[] rowIndicesToRemove)
+    {
+        List<Integer> rowIndicesRemoved = queryParameters.remove(rowIndicesToRemove);
+
+        if (!rowIndicesRemoved.isEmpty())
+        {
+            int startRowIndexDeleted = rowIndicesRemoved.stream().min(Integer::compareTo).orElse(-1);
+            int endRowIndexDeleted = rowIndicesRemoved.stream().max(Integer::compareTo).orElse(-1);
+
+            invokeLater(() -> fireTableRowsDeleted(startRowIndexDeleted, endRowIndexDeleted));
+        }
     }
 
     @Override

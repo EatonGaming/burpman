@@ -5,11 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79b73a27-2a8a-4444-b4e6-5e0517621a31" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/extension/editor/tabs/queryparams/QueryParamsActionsPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/outline_arrow_downward_black_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/outline_arrow_upward_black_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/outline_delete_black_24dp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/6.7/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/nb-cache/subprojects.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/.gradle/nb-cache/subprojects.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/src/main/java/burpman/netbeans/project/editor/QueryParamsTab.form" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/src/main/java/burpman/netbeans/project/editor/QueryParamsTab.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/src/main/java/burpman/netbeans/project/editor/QueryParamsTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/../netbeans-project/burpman-netbeans-project/src/main/java/burpman/netbeans/project/editor/QueryParamsTab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/extension/editor/tabs/queryparams/QueryParamsTableColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/editor/tabs/queryparams/QueryParamsTableColumn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/extension/editor/tabs/queryparams/QueryParamsTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/editor/tabs/queryparams/QueryParamsTab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/extension/editor/tabs/queryparams/QueryParamsTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/editor/tabs/queryparams/QueryParamsTableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/extension/request/QueryParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/testing/TestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/testing/TestHarness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/table/TableCellButtonEditor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/table/TableCellButtonRenderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/extension/request/QueryParametersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/extension/request/QueryParametersTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,9 +133,9 @@
       <recent name="mvc.updatestrategies" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestApplication">
-    <configuration name="TestApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="testing.TestApplication" />
+  <component name="RunManager" selected="Application.TestHarness">
+    <configuration name="TestHarness" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testing.TestHarness" />
       <module name="burpman-project.main" />
       <extension name="coverage">
         <pattern>
@@ -129,84 +147,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="source [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="source [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="source [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="All in burpman-project.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QueryParametersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="burpman-project.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="extension.request.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="extension.request" />
+      <option name="MAIN_CLASS_NAME" value="extension.request.QueryParametersTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QueryParametersTest.givenIndexThatDoesNotExist_whenRemoveQueryParameters_thenParametersAreUnchanged" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="burpman-project.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="extension.request.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="extension.request" />
+      <option name="MAIN_CLASS_NAME" value="extension.request.QueryParametersTest" />
+      <option name="METHOD_NAME" value="givenIndexThatDoesNotExist_whenRemoveQueryParameters_thenParametersAreUnchanged" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QueryParametersTest.givenNegativeIndex_whenRemoveQueryParameters_thenParametersAreUnchanged" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="burpman-project.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="extension.request.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="extension.request" />
+      <option name="MAIN_CLASS_NAME" value="extension.request.QueryParametersTest" />
+      <option name="METHOD_NAME" value="givenNegativeIndex_whenRemoveQueryParameters_thenParametersAreUnchanged" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QueryParametersTest.givenThreeIndices_whenRemoveQueryParameters_thenSpecifiedParametersAreRemoved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="burpman-project.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="extension.request.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="extension.request" />
+      <option name="MAIN_CLASS_NAME" value="extension.request.QueryParametersTest" />
+      <option name="METHOD_NAME" value="givenThreeIndices_whenRemoveQueryParameters_thenSpecifiedParametersAreRemoved" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestApplication" />
-        <item itemvalue="JUnit.All in burpman-project.test" />
-        <item itemvalue="Gradle.source [jar]" />
-        <item itemvalue="Gradle.source [build]" />
-        <item itemvalue="Gradle.source [clean]" />
+        <item itemvalue="Application.TestHarness" />
+        <item itemvalue="JUnit.QueryParametersTest" />
+        <item itemvalue="JUnit.QueryParametersTest.givenNegativeIndex_whenRemoveQueryParameters_thenParametersAreUnchanged" />
+        <item itemvalue="JUnit.QueryParametersTest.givenIndexThatDoesNotExist_whenRemoveQueryParameters_thenParametersAreUnchanged" />
+        <item itemvalue="JUnit.QueryParametersTest.givenThreeIndices_whenRemoveQueryParameters_thenSpecifiedParametersAreRemoved" />
       </list>
     </recent_temporary>
   </component>

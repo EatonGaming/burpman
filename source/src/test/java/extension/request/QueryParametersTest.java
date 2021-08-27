@@ -10,6 +10,7 @@ import static extension.request.QueryParameter.disabledQueryParam;
 import static extension.request.QueryParameter.queryParam;
 import static extension.request.QueryParameters.*;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.in;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.*;
 
@@ -222,5 +223,108 @@ class QueryParametersTest {
         queryParameters.addParameter("foo", "bar");
 
         verify(mockAction, times(1)).run();
+    }
+
+    @Test
+    void givenOneIndex_whenRemoveQueryParameters_thenSpecifiedParameterIsRemoved()
+    {
+        List<QueryParameter> internalList = new ArrayList<>();
+        internalList.add(queryParam("a", "b"));
+        internalList.add(queryParam("c", "d"));
+        internalList.add(queryParam("e", "f"));
+        QueryParameters queryParameters = queryParameters(internalList);
+        int[] queryParameterIndicesToRemove = new int[]{1};
+
+        queryParameters.remove(queryParameterIndicesToRemove);
+
+        assertThat(internalList.size()).isEqualTo(2);
+        assertThat(internalList).containsExactly(queryParam("a", "b"), queryParam("e", "f"));
+    }
+
+    @Test
+    void givenThreeIndices_whenRemoveQueryParameters_thenSpecifiedParametersAreRemoved()
+    {
+        List<QueryParameter> internalList = new ArrayList<>();
+        internalList.add(queryParam("a", "b"));
+        internalList.add(queryParam("c", "d"));
+        internalList.add(queryParam("e", "f"));
+        QueryParameters queryParameters = queryParameters(internalList);
+        int[] queryParameterIndicesToRemove = new int[]{0, 1, 2};
+
+        queryParameters.remove(queryParameterIndicesToRemove);
+
+        assertThat(internalList.size()).isEqualTo(0);
+        assertThat(internalList).isEmpty();
+    }
+
+    @Test
+    void givenIndexThatDoesNotExist_whenRemoveQueryParameters_thenParametersAreUnchanged()
+    {
+        List<QueryParameter> internalList = new ArrayList<>();
+        internalList.add(queryParam("a", "b"));
+        internalList.add(queryParam("c", "d"));
+        internalList.add(queryParam("e", "f"));
+        QueryParameters queryParameters = queryParameters(internalList);
+        int[] queryParameterIndicesToRemove = new int[]{5};
+
+        queryParameters.remove(queryParameterIndicesToRemove);
+
+        assertThat(internalList.size()).isEqualTo(3);
+        assertThat(internalList).containsExactly(
+                queryParam("a", "b"),
+                queryParam("c", "d"),
+                queryParam("e", "f")
+        );
+    }
+
+    @Test
+    void givenNegativeIndex_whenRemoveQueryParameters_thenParametersAreUnchanged()
+    {
+        List<QueryParameter> internalList = new ArrayList<>();
+        internalList.add(queryParam("a", "b"));
+        internalList.add(queryParam("c", "d"));
+        internalList.add(queryParam("e", "f"));
+        QueryParameters queryParameters = queryParameters(internalList);
+        int[] queryParameterIndicesToRemove = new int[]{-2};
+
+        queryParameters.remove(queryParameterIndicesToRemove);
+
+        assertThat(internalList.size()).isEqualTo(3);
+        assertThat(internalList).containsExactly(
+                queryParam("a", "b"),
+                queryParam("c", "d"),
+                queryParam("e", "f")
+        );
+    }
+
+    @Test
+    void givenOneValidIndex_whenRemoveQueryParameters_thenOneIsReturned()
+    {
+        List<QueryParameter> internalList = new ArrayList<>();
+        internalList.add(queryParam("a", "b"));
+        internalList.add(queryParam("c", "d"));
+        internalList.add(queryParam("e", "f"));
+        QueryParameters queryParameters = queryParameters(internalList);
+        int[] queryParameterIndicesToRemove = new int[]{1};
+
+        List<Integer> parametersRemoved = queryParameters.remove(queryParameterIndicesToRemove);
+
+        assertThat(parametersRemoved).hasSize(1);
+        assertThat(parametersRemoved).containsExactly(1);
+    }
+
+    @Test
+    void givenOneInvalidIndex_whenRemoveQueryParameters_thenEmptyListIsReturned()
+    {
+        List<QueryParameter> internalList = new ArrayList<>();
+        internalList.add(queryParam("a", "b"));
+        internalList.add(queryParam("c", "d"));
+        internalList.add(queryParam("e", "f"));
+        QueryParameters queryParameters = queryParameters(internalList);
+        int[] queryParameterIndicesToRemove = new int[]{-3};
+
+        List<Integer> parametersRemoved = queryParameters.remove(queryParameterIndicesToRemove);
+
+        assertThat(parametersRemoved).isEmpty();
     }
 }

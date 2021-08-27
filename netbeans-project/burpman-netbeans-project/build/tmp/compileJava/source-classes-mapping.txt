@@ -1,6 +1,8 @@
+burpman/netbeans/project/editor/AddQueryParamsPanel.java
+ burpman.netbeans.project.editor.AddQueryParamsPanel
 burpman/netbeans/project/editor/QueryParamsTab.java
  burpman.netbeans.project.editor.QueryParamsTab
-burpman/netbeans/project/editor/AddQueryParamPanel.java
- burpman.netbeans.project.editor.AddQueryParamPanel
 burpman/netbeans/project/editor/BurpmanEditor.java
  burpman.netbeans.project.editor.BurpmanEditor
+burpman/netbeans/project/editor/QueryParamsActionsPanel.java
+ burpman.netbeans.project.editor.QueryParamsActionsPanel

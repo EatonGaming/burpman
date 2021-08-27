@@ -6,8 +6,8 @@ extension/editor/tabs/queryparams/AddQueryParamsPanel.java
  extension.editor.tabs.queryparams.AddQueryParamsPanel
  extension.editor.tabs.queryparams.AddQueryParamsPanel$EnterKeyListener
  extension.editor.tabs.queryparams.AddQueryParamsPanel$SelectTextFocusListener
-testing/TestApplication.java
- testing.TestApplication
+mvc/Model.java
+ mvc.Model
 extension/request/RequestModelProperties.java
  extension.request.RequestModelProperties
 extension/logger/Logger.java
@@ -34,26 +34,24 @@ mvc/updatestrategies/ComboBoxUpdateStrategy.java
  mvc.updatestrategies.ComboBoxUpdateStrategy
 mvc/updatestrategies/AbstractComponentUpdateStrategy.java
  mvc.updatestrategies.AbstractComponentUpdateStrategy
-mvc/Model.java
- mvc.Model
 extension/request/RequestModel.java
  extension.request.RequestModel
 extension/request/QueryParameter.java
  extension.request.QueryParameter
 extension/editor/BurpmanEditorTab.java
  extension.editor.BurpmanEditorTab
-utils/table/TableCellButtonEditor.java
- utils.table.TableCellButtonEditor
-utils/table/TableCellButtonRenderer.java
- utils.table.TableCellButtonRenderer
+testing/TestHarness.java
+ testing.TestHarness
 extension/editor/tabs/queryparams/QueryParamsTableColumn.java
  extension.editor.tabs.queryparams.QueryParamsTableColumn
 extension/request/QueryParameters.java
  extension.request.QueryParameters
-extension/editor/tabs/queryparams/QueryParamsTab.java
- extension.editor.tabs.queryparams.QueryParamsTab
- extension.editor.tabs.queryparams.QueryParamsTab$1
 extension/editor/BurpmanEditor.java
  extension.editor.BurpmanEditor
 extension/editor/tabs/queryparams/QueryParamsTableModel.java
  extension.editor.tabs.queryparams.QueryParamsTableModel
+extension/editor/tabs/queryparams/QueryParamsTab.java
+ extension.editor.tabs.queryparams.QueryParamsTab
+ extension.editor.tabs.queryparams.QueryParamsTab$1
+extension/editor/tabs/queryparams/QueryParamsActionsPanel.java
+ extension.editor.tabs.queryparams.QueryParamsActionsPanel

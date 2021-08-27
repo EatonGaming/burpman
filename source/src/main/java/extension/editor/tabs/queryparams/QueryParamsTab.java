@@ -43,8 +43,6 @@ public class QueryParamsTab extends JPanel {
             int columnWidth = Math.round(tableWidth * x.columnWidthPercentage);
 
             tableColumn.setPreferredWidth(columnWidth);
-            tableColumn.setCellRenderer(x.cellRenderer);
-            tableColumn.setCellEditor(x.cellEditor);
         });
     }
 
